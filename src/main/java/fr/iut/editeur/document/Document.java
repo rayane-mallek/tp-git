@@ -37,4 +37,8 @@ public class Document {
         String rightPart = this.texte.substring(end);
         this.texte = leftPart + middlePart + rightPart;
     }
+
+    public void clear() {
+        this.texte = "a";
+    }
 }

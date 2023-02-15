@@ -14,7 +14,7 @@ public class CommandeRemplacer extends CommandeDocument {
             System.err.println("Format attendu : remplacer;0;5;nouveauTexte");
             return;
         }
-        String texte = parameters[1];
+
         this.document.remplacer(Integer.parseInt(parameters[1]), Integer.parseInt(parameters[2]), parameters[3]);
         super.executer();
     }
