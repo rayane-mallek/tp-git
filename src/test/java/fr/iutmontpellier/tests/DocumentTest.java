@@ -11,7 +11,7 @@ public class DocumentTest extends TestCase {
         document.ajouter("Bonjour ");
         document.ajouter("le ");
         document.ajouter("monde !");
-        assertEquals("Bonjourle monde !", document.getTexte());
+        assertEquals("Bonjour le monde !", document.getTexte());
     }
 
     @Test
