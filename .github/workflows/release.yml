@@ -18,14 +18,17 @@ jobs:
         with:
           java-version: 17
 
+      - name: Set new version
+        run: mvn versions:set -DnewVersion=$GITHUB_REF -DgenerateBackupPoms=false
+
       - name: Build JAR
-        run: mvn versions:set -DnewVersion=${{ github.ref_name }} -DgenerateBackupPoms=false
+        run: mvn package
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            target/EditeurDeTexte-${{ github.ref_name }}.jar
+            target/EditeurDeTexte-$GITHUB_REF.jar
 
     permissions:
       contents: write
