@@ -1,7 +1,7 @@
 package fr.iut.editeur.document;
 
 /**
- * The TYPE Document.
+ * The T Y P E Document.
  */
 public class Document {
 
